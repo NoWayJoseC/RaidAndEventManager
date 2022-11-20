@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+<XmlExtensions.SettingsMenuDef>
+	<defName>REManager</defName>
+	<modId>REManager</modId>
+	<label>Raid and Event Manager</label>
+<settings>
+
+	<li Class="XmlExtensions.Setting.Text">
+		<text>Raid and Event Manager</text>
+		<font>Medium</font>
+		<anchor>Middle</anchor>
+		</li>
+	<li Class="XmlExtensions.Setting.Text">
+		<text>by NoWayJose</text>
+		<font>Small</font>
+		<anchor>Middle</anchor>
+		</li>
+	<li Class="XmlExtensions.Setting.Text">
+		<text>https://steamcommunity.com/id/glasshalff00l</text>
+		<font>Tiny</font>
+		<anchor>Middle</anchor>
+		</li>
+	<li Class="XmlExtensions.Setting.GapLine"/>
+	<li Class="XmlExtensions.Setting.SetColor">
+		<color>(255,255,0)</color>
+		</li>
+	<li Class="XmlExtensions.Setting.Text">
+		<text>IMPORTANT! Restart or reload game for any changes to take effect.</text>
+		<anchor>Middle</anchor>
+		</li>
+	<li Class="XmlExtensions.Setting.SetColor">
+		<color>(255,255,255)</color>
+		</li>
+
+	<li Class="XmlExtensions.Setting.Text">
+		<text>Raid Strategies and Arrival Types</text>
+		<font>Medium</font>
+		</li>
+	<li Class="XmlExtensions.Setting.GapLine"/>
+
+		<li Class="XmlExtensions.Setting.Checkbox">
+			<key>immediateAttack</key>
+			<label>Disable Immediate Attack Walk-in Raids?</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+		<li Class="XmlExtensions.Setting.Checkbox">
+			<key>immediateSmart</key>
+			<label>Disable SMART Immediate Attack Walk-in Raids?</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+		<li Class="XmlExtensions.Setting.Checkbox">
+			<key>stagethenattack</key>
+			<label>Disable Stage-then-Attack Walk-in Raids?</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+		<li Class="XmlExtensions.Setting.Checkbox">
+			<key>breach</key>
+			<label>Disable Breach Raids?</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+		<li Class="XmlExtensions.Setting.Checkbox">
+			<key>sapper</key>
+			<label>Disable Sapper Raids?</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+		<li Class="XmlExtensions.Setting.Checkbox">
+			<key>siege</key>
+			<label>Disable Siege Raids?</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+		<li Class="XmlExtensions.Setting.Checkbox">
+			<key>droppodedge</key>
+			<label>Disable Drop Pod Raids? (EDGE)</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+		<li Class="XmlExtensions.Setting.Checkbox">
+			<key>droppodcenter</key>
+			<label>Disable Drop Pod Raids? (CENTER)</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+		<li Class="XmlExtensions.Setting.Checkbox">
+			<key>droppodhaywire</key>
+			<label>Disable Drop Pod Raids? (HAYWIRE / RANDOM)</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+<li Class="XmlExtensions.Setting.SetColor">
+		<color>(255,255,0)</color>
+		</li>
+	<li Class="XmlExtensions.Setting.Text">
+		<text>If all strategies are disabled, the game will default to "Immediate Attack" and produce a (harmless) error in the dev console. </text>
+		<anchor>Middle</anchor>
+		</li>
+<li Class="XmlExtensions.Setting.SetColor">
+		<color>(255,255,255)</color>
+		</li>
+
+	<li Class="XmlExtensions.Setting.Text">
+		<text>Events</text>
+		<font>Medium</font>
+		</li>
+	<li Class="XmlExtensions.Setting.GapLine"/>
+
+
+		<li Class="XmlExtensions.Setting.Checkbox">
+			<key>infestation</key>
+			<label>Disable Infestations?</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+		<li Class="XmlExtensions.Setting.Checkbox">
+			<key>deepdrillinfestation</key>
+			<label>Disable Deep Drill Infestations?</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+		<li Class="XmlExtensions.Setting.Checkbox">
+			<key>WastepackInfestation</key>
+			<label>Disable Wastepack Infestaitons? (Requires Biotech)</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+		<li Class="XmlExtensions.Setting.Checkbox">
+			<key>MechCluster</key>
+			<label>Disable Mech Cluster? (Requires Royalty)</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+		<li Class="XmlExtensions.Setting.Checkbox">
+			<key>mechshippart</key>
+			<label>Disable Mechanoid Ship Parts?</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+		<li Class="XmlExtensions.Setting.Checkbox">	
+			<key>ShortCircuit</key>
+			<label>Disable Short Circuit Event? (ZZZTT! Event)</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+		<li Class="XmlExtensions.Setting.Checkbox">
+			<key>blight</key>
+			<label>Disable Blight Event?</label>
+			<defaultValue>false</defaultValue>
+		</li>
+
+		<li Class="XmlExtensions.Setting.SetColor">
+		<color>(255,255,0)</color>
+		</li>
+	<li Class="XmlExtensions.Setting.Text">
+		<text>Feel like there's a toggle you'd like added? Throw up a comment on the Steam Workshop and I'll see if it's possible.</text>
+		<anchor>Middle</anchor>
+		</li>
+
+</settings>
+</XmlExtensions.SettingsMenuDef>
+</Defs>

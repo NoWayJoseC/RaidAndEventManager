@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+<!-- DISABLE IMMEDIATE WALK-IN RAIDS -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>immediateAttack</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/RaidStrategyDef[defName = "ImmediateAttack"]/selectionWeightPerPointsCurve/points</xpath>
+				<value>
+					<points>
+					<li>(0, 0)</li>
+					<li>(0, 0)</li>
+					</points>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/RaidStrategyDef[defName = "ImmediateAttack"]/pointsFactorCurve/points</xpath>
+				<value>
+					<points>
+					<li>(0, 0)</li>
+					<li>(0, 0)</li>
+					</points>
+				</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+
+<!-- DISABLE IMMEDIATE SMART RAIDS -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>immediateSmart</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/RaidStrategyDef[defName = "ImmediateAttackSmart"]/selectionWeightPerPointsCurve/points</xpath>
+				<value>
+      					<points>
+        				<li>(0,0)</li>
+       					<li>(0,0)</li>
+      					</points>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/RaidStrategyDef[defName = "ImmediateAttackSmart"]/pointsFactorCurve</xpath>
+				<value>
+					<pointsFactorCurve>
+					<points>
+					<li>(0, 0)</li>
+					<li>(0, 0)</li>
+					</points>
+					</pointsFactorCurve>
+				</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+
+<!-- DISABLE Stage-then-Attack RAIDS -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>stagethenattack</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/RaidStrategyDef[defName = "StageThenAttack"]/selectionWeightPerPointsCurve/points</xpath>
+				<value>
+					<points>
+					<li>(0, 0)</li>
+					<li>(0, 0)</li>
+					</points>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/RaidStrategyDef[defName = "StageThenAttack"]/pointsFactorCurve</xpath>
+				<value>
+					<pointsFactorCurve>
+					<points>
+					<li>(0, 0)</li>
+					<li>(0, 0)</li>
+					</points>
+					</pointsFactorCurve>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/RaidStrategyDef[defName = "StageThenAttack"]/selectionWeightCurvesPerFaction</xpath>
+				<value>
+					<selectionWeightCurvesPerFaction>
+					<li>
+					<faction>Mechanoid</faction>
+					<selectionWeightPerPointsCurve>
+					<points>
+					<li>(0, 0)</li> <!-- Constant 1 -->
+					</points>
+					</selectionWeightPerPointsCurve>
+					</li>
+					</selectionWeightCurvesPerFaction>
+				</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+
+
+<!-- DISABLE BREACH RAIDS -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>breach</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/RaidStrategyDef[@Name = "BreachingBase"]/selectionWeightPerPointsCurve/points</xpath>
+    				<value>
+					<points>
+        				<li>(700, 0)</li>
+        				<li>(2000, 0)</li>
+					</points>
+    				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+    			<xpath>/Defs/RaidStrategyDef[@Name = "BreachingBase"]/selectionWeightCurvesPerFaction</xpath>
+				<value>
+				<selectionWeightCurvesPerFaction>
+     				<li>
+				<faction>Mechanoid</faction>  <!-- Special case for mechanoids -->
+					<selectionWeightPerPointsCurve>
+          				<points>
+            				  <li>(700, 0)</li>
+           				  <li>(1000, 0)</li>
+         				</points>
+					</selectionWeightPerPointsCurve>
+     				</li>
+				</selectionWeightCurvesPerFaction>
+				</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+
+<!-- DISABLE SAPPER RAIDS -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>sapper</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationReplace">
+    			<xpath>/Defs/RaidStrategyDef[defName = "ImmediateAttackSappers"]/selectionWeightPerPointsCurve/points</xpath>
+    			<value>
+				<points>
+        			<li>(700, 0)</li>
+        			<li>(1000, 0)</li>
+				</points>
+    			</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+
+
+<!-- DISABLE SIEGE RAIDS -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>siege</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationReplace">
+    			<xpath>/Defs/RaidStrategyDef[defName = "Siege"]/selectionWeightPerPointsCurve/points</xpath>
+    			<value>
+				<points>
+        			<li>(700, 0)</li>
+        			<li>(1000, 0)</li>
+				</points>
+    			</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+
+
+<!-- DISABLE EDGE (& GROUP EDGE) DROP POD RAIDS -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>droppodedge</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<li Class="PatchOperationRemove">
+			<xpath>/Defs/RaidStrategyDef/arriveModes/li[text() = "EdgeDrop" or text() = "EdgeDropGroups"]</xpath>
+           		</li>
+		</caseTrue>
+	</Operation>
+
+<!-- DISABLE CENTER DROP POD RAIDS -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>droppodcenter</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<li Class="PatchOperationRemove">
+			<xpath>/Defs/RaidStrategyDef/arriveModes/li[text() = "CenterDrop"]</xpath>
+           		</li>
+		</caseTrue>
+	</Operation>
+
+<!-- DISABLE HAYWIRE (RANDOM) DROP POD RAIDS -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>droppodhaywire</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<li Class="PatchOperationRemove">
+			<xpath>/Defs/RaidStrategyDef/arriveModes/li[text() = "RandomDrop"]</xpath>
+           		</li>
+		</caseTrue>
+	</Operation>
+
+<!-- DISABLE INFESTATIONS -->
+
+<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>infestation</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationReplace">
+    				<xpath>/Defs/IncidentDef[defName = "Infestation"]/baseChance</xpath>
+    				<value>
+					<baseChance>0</baseChance>
+    				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+    				<xpath>/Defs/IncidentDef[defName = "Infestation"]/minRefireDays</xpath>
+    				<value>
+					<minRefireDays>100000</minRefireDays>
+    				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+    				<xpath>/Defs/IncidentDef[defName = "Infestation"]/minThreatPoints</xpath>
+    				<value>
+					<minThreatPoints>100000</minThreatPoints>
+    				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+    				<xpath>/Defs/IncidentDef[defName = "Infestation"]/pointsScaleable</xpath>
+    				<value>
+					<pointsScaleable>false</pointsScaleable>
+    				</value>
+			</Operation>
+			<Operation Class="PatchOperationInsert">
+				<xpath>Defs/IncidentDef[defName = "Infestation"]</xpath>
+				<value>
+					<earliestDay>100000</earliestDay>
+				</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+
+<!-- DISABLE DEEP DRILL INFESTATIONS-->
+
+<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>deepdrillinfestation</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationReplace">
+    				<xpath>/Defs/IncidentDef[defName = "DeepDrillInfestation"]/baseChance</xpath>
+    				<value>
+					<baseChance>0</baseChance>
+    				</value>
+			</Operation>
+			<Operation Class="PatchOperationInsert">
+    				<xpath>/Defs/IncidentDef[defName = "DeepDrillInfestation"]</xpath>
+    				<value>
+					<minRefireDays>100000</minRefireDays>
+    				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+    				<xpath>/Defs/IncidentDef[defName = "DeepDrillInfestation"]/pointsScaleable</xpath>
+    				<value>
+					<pointsScaleable>false</pointsScaleable>
+    				</value>
+			</Operation>
+			<Operation Class="PatchOperationInsert">
+				<xpath>/Defs/IncidentDef[defName = "DeepDrillInfestation"]</xpath>
+				<value>
+					<minThreatPoints>100000</minThreatPoints>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationInsert">
+				<xpath>Defs/IncidentDef[defName = "DeepDrillInfestation"]</xpath>
+				<value>
+					<earliestDay>100000</earliestDay>
+				</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+
+<!-- DISABLE WASTEPACK INFESTATIONS-->
+
+<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>WastepackInfestation</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationReplace">
+    				<xpath>/Defs/IncidentDef[defName = "WastepackInfestation"]/baseChance</xpath>
+    				<value>
+					<baseChance>0</baseChance>
+    				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+    				<xpath>/Defs/IncidentDef[defName = "WastepackInfestation"]/minRefireDays</xpath>
+    				<value>
+					<minRefireDays>100000</minRefireDays>
+    				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+    				<xpath>/Defs/IncidentDef[defName = "WastepackInfestation"]/pointsScaleable</xpath>
+    				<value>
+					<pointsScaleable>false</pointsScaleable>
+    				</value>
+			</Operation>
+			<Operation Class="PatchOperationInsert">
+				<xpath>/Defs/IncidentDef[defName = "WastepackInfestation"]</xpath>
+				<value>
+					<minThreatPoints>100000</minThreatPoints>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationInsert">
+				<xpath>Defs/IncidentDef[defName = "WastepackInfestation"]</xpath>
+				<value>
+					<earliestDay>100000</earliestDay>
+				</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+
+<!-- DISABLE MECH CLUSTERS -->
+
+<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>MechCluster</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+		<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "MechCluster"]/baseChanceWithRoyalty</xpath>
+				<value>
+					<baseChanceWithRoyalty>0</baseChanceWithRoyalty>
+				</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "MechCluster"]/minThreatPoints</xpath>
+				<value>
+					 <minThreatPoints>100000</minThreatPoints>
+				</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "MechCluster"]/pointsScaleable</xpath>
+				<value>
+					 <pointsScaleable>true</pointsScaleable>
+				</value>
+		</Operation>
+		</caseTrue>
+	</Operation>
+
+<!-- DISABLE MECHANOID SHIP PARTS -->
+
+<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>mechshippart</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "PsychicEmanatorShipPartCrash"]/baseChance</xpath>
+				<value>
+					<baseChance>0</baseChance>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "PsychicEmanatorShipPartCrash"]/baseChanceWithRoyalty</xpath>
+				<value>
+			<baseChanceWithRoyalty>0</baseChanceWithRoyalty>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "PsychicEmanatorShipPartCrash"]/minRefireDays</xpath>
+				<value>
+					<minRefireDays>0</minRefireDays>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "PsychicEmanatorShipPartCrash"]/pointsScaleable</xpath>
+				<value>
+					<pointsScaleable>false</pointsScaleable>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "PsychicEmanatorShipPartCrash"]/minThreatPoints</xpath>
+				<value>
+					<minThreatPoints>100000</minThreatPoints>
+				</value>
+			</Operation>
+
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "DefoliatorShipPartCrash"]/baseChance</xpath>
+				<value>
+					<baseChance>0</baseChance>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "DefoliatorShipPartCrash"]/baseChanceWithRoyalty</xpath>
+				<value>
+			<baseChanceWithRoyalty>0</baseChanceWithRoyalty>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "DefoliatorShipPartCrash"]/minRefireDays</xpath>
+				<value>
+					<minRefireDays>0</minRefireDays>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "DefoliatorShipPartCrash"]/pointsScaleable</xpath>
+				<value>
+					<pointsScaleable>false</pointsScaleable>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "DefoliatorShipPartCrash"]/minThreatPoints</xpath>
+				<value>
+					<minThreatPoints>100000</minThreatPoints>
+				</value>
+			</Operation>
+
+		</caseTrue>
+	</Operation>
+
+<!-- DISABLE SHORT CIRCUIT (ZZZTT) -->
+
+<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>shortcircuit</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationReplace">
+    				<xpath>/Defs/IncidentDef[defName = "ShortCircuit"]/baseChance</xpath>
+    				<value>
+					<baseChance>0</baseChance>
+    				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+    				<xpath>/Defs/IncidentDef[defName = "ShortCircuit"]/minRefireDays</xpath>
+    				<value>
+					<minRefireDays>100000</minRefireDays>
+    				</value>
+			</Operation>
+			<Operation Class="PatchOperationInsert">
+    				<xpath>/Defs/IncidentDef[defName = "ShortCircuit"]/pointsScaleable</xpath>
+    				<value>
+					<pointsScaleable>false</pointsScaleable>
+    				</value>
+			</Operation>
+			<Operation Class="PatchOperationInsert">
+				<xpath>/Defs/IncidentDef[defName = "ShortCircuit"]</xpath>
+				<value>
+					<minThreatPoints>100000</minThreatPoints>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationInsert">
+				<xpath>Defs/IncidentDef[defName = "ShortCircuit"]</xpath>
+				<value>
+					<earliestDay>100000</earliestDay>
+				</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+
+<!-- DISABLE BLIGHT -->
+
+<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>REManager</modId>
+		<key>blight</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "CropBlight"]/baseChance</xpath>
+				<value>
+					<baseChance>0.3</baseChance>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "CropBlight"]/minRefireDays</xpath>
+				<value>
+					<minRefireDays>100000</minRefireDays>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName = "CropBlight"]/pointsScaleable</xpath>
+				<value>
+					<pointsScaleable>true</pointsScaleable>
+				</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+</Patch>
+	
