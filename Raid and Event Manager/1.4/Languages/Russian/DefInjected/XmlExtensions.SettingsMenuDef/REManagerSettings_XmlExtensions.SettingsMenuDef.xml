@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+<!--/1.4/Defs/REManagerSettings.xml-->
+            <!-- Raid and Event Manager -->
+<REManager.label>Менеджер по рейдам и событиям</REManager.label>
+                      <!-- Raid and Event Manager -->
+<REManager.settings.0.text>Менеджер по рейдам и событиям</REManager.settings.0.text>
+                      <!-- by NoWayJose -->
+<REManager.settings.1.text>автор: NoWayJose и jicenok</REManager.settings.1.text>
+                      <!-- https://steamcommunity.com/id/glasshalff00l -->
+<REManager.settings.2.text>https://steamcommunity.com/id/glasshalff00l</REManager.settings.2.text>
+                      <!-- IMPORTANT! Restart or reload game for any changes to take effect. -->
+<REManager.settings.5.text>ВАЖНО! Перезапустите или перезагрузите игру, чтобы изменения вступили в силу.</REManager.settings.5.text>
+                      <!-- Raid Strategies and Arrival Types -->
+<REManager.settings.7.text>Стратегии рейдов и типы прибытия</REManager.settings.7.text>
+                       <!-- Disable Immediate Attack Walk-in Raids? -->
+<REManager.settings.9.label>Отключить рейды с немедленной атакой?</REManager.settings.9.label>
+                        <!-- Disable SMART Immediate Attack Walk-in Raids? -->
+<REManager.settings.10.label>Отключить немедленную атаку SMART в рейдах?</REManager.settings.10.label>
+                        <!-- Disable Stage-then-Attack Walk-in Raids? -->
+<REManager.settings.11.label>Отключить рейды с атакой по стадиям?</REManager.settings.11.label>
+                        <!-- Disable Breach Raids? -->
+<REManager.settings.12.label>Отключить рейды на разлом?</REManager.settings.12.label>
+                        <!-- Disable Sapper Raids? -->
+<REManager.settings.13.label>Отключить рейды сапёров?</REManager.settings.13.label>
+                        <!-- Disable Siege Raids? -->
+<REManager.settings.14.label>Отключить осадные рейды?</REManager.settings.14.label>
+                        <!-- Disable Drop Pod Raids? (EDGE) -->
+<REManager.settings.15.label>Отключить рейды с дропшипами? (EDGE)</REManager.settings.15.label>
+                        <!-- Disable Drop Pod Raids? (CENTER) -->
+<REManager.settings.16.label>Отключить рейды дропшипов? (ЦЕНТР)</REManager.settings.16.label>
+                        <!-- Disable Drop Pod Raids? (HAYWIRE / RANDOM) -->
+<REManager.settings.17.label>Отключить рейды дропшипов? (HAYWIRE / В СЛУЧАЙНОМ ПОРЯДКЕ)</REManager.settings.17.label>
+                       <!-- If all strategies are disabled, the game will default to "Immediate Attack" and produce a (harmless) error in the dev console.  -->
+<REManager.settings.19.text>Если все стратегии отключены, игра по умолчанию будет использовать "Немедленную атаку" и выдаст (безобидную) ошибку в консоли разработчика. </REManager.settings.19.text>
+                       <!-- Events -->
+<REManager.settings.21.text>События</REManager.settings.21.text>
+                        <!-- Disable Infestations? -->
+<REManager.settings.23.label>Нужны заражения?</REManager.settings.23.label>
+                        <!-- Disable Deep Drill Infestations? -->
+<REManager.settings.24.label>Disable Deep Drill Infestations?</REManager.settings.24.label>
+                        <!-- Disable Wastepack Infestaitons? (Requires Biotech) -->
+<REManager.settings.25.label>Отключить заражение отходов? (Требуется Biotech)</REManager.settings.25.label>
+                        <!-- Disable Mech Cluster? (Requires Royalty) -->
+<REManager.settings.26.label>Отключить кластер мехов? (Требуется Royalty)</REManager.settings.26.label>
+                        <!-- Disable Mechanoid Ship Parts? -->
+<REManager.settings.27.label>Отключить части корабля механоидов?</REManager.settings.27.label>
+                        <!-- Disable Short Circuit Event? (ZZZTT! Event) -->
+<REManager.settings.28.label>Отключение события "Короткое замыкание"? (Ббзз...! Event)</REManager.settings.28.label>
+                        <!-- Disable Blight Event? -->
+<REManager.settings.29.label>Отключить событие "Солнечная вспышка"?</REManager.settings.29.label>
+                       <!-- Feel like there's a toggle you'd like added? Throw up a comment on the Steam Workshop and I'll see if it's possible. -->
+<REManager.settings.31.text>Чувствуете, что вам хотелось бы добавить какой-нибудь тумблер? Напишите комментарий в Steam Workshop, и я посмотрю, возможно ли это.</REManager.settings.31.text>
+
+</LanguageData>
